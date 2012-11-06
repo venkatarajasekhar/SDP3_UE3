@@ -74,6 +74,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cryptographer.h" />
+    <ClInclude Include="CryptographerCaeser.h" />
+    <ClInclude Include="CryptographerRSA.h" />
+    <ClInclude Include="EpcosAdapter.h" />
+    <ClInclude Include="IEpcos.h" />
+    <ClInclude Include="INortelNetworks.h" />
+    <ClInclude Include="NortelNetworksAdapter.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="TEncoding.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cryptographer.cpp" />
+    <ClCompile Include="CryptographerCaeser.cpp" />
+    <ClCompile Include="CryptographerRSA.cpp" />
+    <ClCompile Include="EpcosAdapter.cpp" />
+    <ClCompile Include="NortelNetworksAdapter.cpp" />
+    <ClCompile Include="Object.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

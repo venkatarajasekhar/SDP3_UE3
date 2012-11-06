@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="adb1ebdb-a45c-498d-8000-e16f5022536f" name="Cryptography" linkedPackageId="75c98340-2b5a-4c3c-80f8-3e547a47ac95" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="688486c5-3722-402a-8c30-10e80c6e20fc">
-      <profileInstance Id="bb4865c0-96ec-4ac7-ba9c-bbf56eb04dd4" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="815d1fe8-e660-4148-a6fd-70c8af41e8e8">
-      <profileInstance Id="fb5085aa-2d30-40b0-87d4-cd5472c32afd" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="f3851029-8085-481d-8c54-1569e669bd29" name="Epcos" isAbstract="false" isLeaf="false">
+      <Interface Id="f3851029-8085-481d-8c54-1569e669bd29" name="IEpcos" isAbstract="false" isLeaf="false">
         <elementDefinition Id="54c0e92f-7bae-48db-ad29-f0b84b3a7de2" />
         <ownedOperations>
           <operation Id="68347dfd-6797-4bd9-878b-58132de23adc" name="EncryptRSA" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
@@ -59,7 +45,7 @@
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="8394a3bb-21dd-4063-972a-e2bc1a20157d" name="NortelNetworks" isAbstract="false" isLeaf="false">
+      <Interface Id="8394a3bb-21dd-4063-972a-e2bc1a20157d" name="INortelNetworks" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4994545d-303d-4948-ab1d-c04ad16db910" />
         <suppliersInternal>
           <dependency Id="9fc9ee8b-ba7d-44a8-a336-985ff881b445">
@@ -140,7 +126,7 @@
         <elementDefinition Id="a47af673-8104-4dc4-b502-51939287acf3" />
         <suppliersInternal>
           <interfaceRealization Id="16f21277-4a43-45c7-95cf-66abdb548ae7">
-            <interfaceMoniker Id="8394a3bb-21dd-4063-972a-e2bc1a20157d" LastKnownName="NortelNetworks" />
+            <interfaceMoniker Id="8394a3bb-21dd-4063-972a-e2bc1a20157d" LastKnownName="INortelNetworks" />
             <elementDefinition Id="e9133787-c25b-417f-9d0f-1259e4ff7594" />
           </interfaceRealization>
         </suppliersInternal>
@@ -321,7 +307,7 @@
         <elementDefinition Id="816c623f-c145-427b-b1cf-971fcb0bd715" />
         <suppliersInternal>
           <interfaceRealization Id="ef902bbf-a181-4d08-b92d-8bfb798de949">
-            <interfaceMoniker Id="f3851029-8085-481d-8c54-1569e669bd29" LastKnownName="Epcos" />
+            <interfaceMoniker Id="f3851029-8085-481d-8c54-1569e669bd29" LastKnownName="IEpcos" />
             <elementDefinition Id="1f5fd50e-7655-4af6-be65-ce1510658ac8" />
           </interfaceRealization>
         </suppliersInternal>
@@ -403,7 +389,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="07256066-47c5-4aa0-816b-80c94afdb9f9" name="CryptographerRSA" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="07256066-47c5-4aa0-816b-80c94afdb9f9" name="CryptographerRSA" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="680a8fae-e705-4622-b94c-20e30a527c97" />
         <generalsInternal>
           <generalization Id="61ceed1c-4bcd-41aa-bb2a-12082e828ad9" isSubstitutable="false">
@@ -442,7 +428,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="4d8f99d9-68a2-4d7f-9618-4416fe5ed946" name="CryptographerCaeser" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="4d8f99d9-68a2-4d7f-9618-4416fe5ed946" name="CryptographerCaeser" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="93af75cc-4af8-466c-bbbe-b62229ba5ea1" />
         <generalsInternal>
           <generalization Id="7c613b57-e451-4017-9f24-e2fa9bef832a" isSubstitutable="false">
@@ -498,5 +484,19 @@
   </packagedElements>
   <package Id="75c98340-2b5a-4c3c-80f8-3e547a47ac95" name="Classdiagram">
     <elementDefinition Id="7fdcee38-ffb8-4536-a4de-32d4a27c2756" />
+    <profileInstances>
+      <packageHasProfileInstances Id="688486c5-3722-402a-8c30-10e80c6e20fc">
+        <profileInstance Id="bb4865c0-96ec-4ac7-ba9c-bbf56eb04dd4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="815d1fe8-e660-4148-a6fd-70c8af41e8e8">
+        <profileInstance Id="fb5085aa-2d30-40b0-87d4-cd5472c32afd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -21,7 +21,7 @@
     <packageHasNamedElement>
       <Interface
         Id="54c0e92f-7bae-48db-ad29-f0b84b3a7de2"
-        name="Epcos"
+        name="IEpcos"
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
@@ -93,7 +93,7 @@
     <packageHasNamedElement>
       <Interface
         Id="4994545d-303d-4948-ab1d-c04ad16db910"
-        name="NortelNetworks"
+        name="INortelNetworks"
         isAbstract="false"
         isLeaf="false">
         <suppliersInternal>
@@ -218,7 +218,7 @@
             Id="e9133787-c25b-417f-9d0f-1259e4ff7594">
             <interfaceMoniker
               Id="4994545d-303d-4948-ab1d-c04ad16db910"
-              LastKnownName="NortelNetworks"
+              LastKnownName="INortelNetworks"
               LastKnownLocation="Classdiagram.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -520,7 +520,7 @@
             Id="1f5fd50e-7655-4af6-be65-ce1510658ac8">
             <interfaceMoniker
               Id="54c0e92f-7bae-48db-ad29-f0b84b3a7de2"
-              LastKnownName="Epcos"
+              LastKnownName="IEpcos"
               LastKnownLocation="Classdiagram.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -671,7 +671,7 @@
       <class
         Id="680a8fae-e705-4622-b94c-20e30a527c97"
         name="CryptographerRSA"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -740,7 +740,7 @@
       <class
         Id="93af75cc-4af8-466c-bbbe-b62229ba5ea1"
         name="CryptographerCaeser"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
