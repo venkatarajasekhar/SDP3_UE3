@@ -1,12 +1,14 @@
 #ifndef CRYPTOGRAPHERRSA_H
 #define CRYPTOGRAPHERRSA_H
 
+#include "Cryptographer.h"
+
 class CryptographerRSA :
 	public Cryptographer
 {
 public:
-	virtual void Decrypt();
-	virtual void Encrypt();
-}
+	void Decrypt();
+	void Encrypt();
+};
 
 #endif

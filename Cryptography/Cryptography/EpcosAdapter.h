@@ -1,10 +1,17 @@
 #ifndef EPCOSADAPTER_H
 #define EPCOSADAPTER_H
 
-class EpcosAdapter
+#include <string>
+#include "Object.h"
+#include "IEpcos.h"
+#include "Cryptographer.h"
+
+class EpcosAdapter :
+	public Object,
+	public IEpcos
 {
-	virtual void DecryptRSA(string const& filename);
-	virtual void EncryptRSA(string const& filename);
-}
+	void DecryptRSA(std::string const& filename);
+	void EncryptRSA(std::string const& filename);
+};
 
 #endif

@@ -89,6 +89,7 @@
     <ClCompile Include="CryptographerCaeser.cpp" />
     <ClCompile Include="CryptographerRSA.cpp" />
     <ClCompile Include="EpcosAdapter.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="NortelNetworksAdapter.cpp" />
     <ClCompile Include="Object.cpp" />
   </ItemGroup>

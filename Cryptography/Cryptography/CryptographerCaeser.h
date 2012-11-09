@@ -1,12 +1,14 @@
 #ifndef CRYPTOGRAPHERCAESAR_H
 #define CRYPTOGRAPHERCAESAR_H
 
+#include "Cryptographer.h"
+
 class CryptographerCaeser :
 	public Cryptographer
 {
 public:
-	virtual void Decrypt();
-	virtual void Encrypt();
-}
+	void Decrypt();
+	void Encrypt();
+};
 
 #endif
