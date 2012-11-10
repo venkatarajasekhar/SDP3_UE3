@@ -219,10 +219,10 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="909e3bbb-f852-4792-8b63-ccf8e06dd6b7" name="mFileStream" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="909e3bbb-f852-4792-8b63-ccf8e06dd6b7" name="mFileStream" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0b5dbfb7-a674-4976-9c70-758094e55096" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="668ab005-1750-4148-abbc-c2b556fd01a5" LastKnownName="fstream" />
+              <referencedTypeMoniker Id="eaae8370-f4f4-4cc5-bd26-a7359fa2618c" LastKnownName="fstream" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -477,7 +477,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="668ab005-1750-4148-abbc-c2b556fd01a5" name="fstream" isAbstract="false" isLeaf="false" cachedFullName="fstream">
+      <referencedType Id="eaae8370-f4f4-4cc5-bd26-a7359fa2618c" name="fstream" isAbstract="false" isLeaf="false" cachedFullName="fstream">
         <elementDefinition Id="d5245ff0-5c26-440b-a93b-2c59ee30694f" />
       </referencedType>
     </packageHasNamedElement>

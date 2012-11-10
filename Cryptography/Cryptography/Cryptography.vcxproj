@@ -93,6 +93,10 @@
     <ClCompile Include="NortelNetworksAdapter.cpp" />
     <ClCompile Include="Object.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="test.txt" />
+    <None Include="test1.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

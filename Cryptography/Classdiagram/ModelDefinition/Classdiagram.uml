@@ -377,7 +377,7 @@
           <property
             Id="0b5dbfb7-a674-4976-9c70-758094e55096"
             name="mFileStream"
-            visibility="Private"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

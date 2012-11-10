@@ -1,7 +1,7 @@
 #ifndef CRYPTOGRAPHER_H
 #define CRYPTOGRAPHER_H
 
-#include <fstream>
+#include <string>
 #include "Object.h"
 
 class Cryptographer :
@@ -11,10 +11,12 @@ public:
 	virtual ~Cryptographer();
 	virtual void Decrypt() = 0;
 	virtual void Encrypt() = 0;
-	bool ReadFile(std::string const& filename);
-	bool WriteFile(std::string const& filename);
+	void ReadFile(std::string const& filename);
+	void WriteFile(std::string const& filename);
+protected:
+	std::string mData;
 private:
-	std::fstream mFileStream;
+	void FileToString(std::string const& filename);
 };
 
 #endif
