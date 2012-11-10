@@ -6,8 +6,6 @@
 #include "IEpcos.h"
 #include "Cryptographer.h"
 
-std::string const extensionRSA = ".RSA";
-
 class EpcosAdapter :
 	public Object,
 	public IEpcos

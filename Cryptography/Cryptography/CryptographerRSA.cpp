@@ -1,10 +1,8 @@
 #include "CryptographerRSA.h"
 
-using namespace std;
-
 void CryptographerRSA::Decrypt()
 {
-	string::iterator itor;
+	std::string::iterator itor;
 	for(itor = mData.begin();itor != mData.end();++itor)
 	{
 		DecryptRSA(*itor);
@@ -13,7 +11,7 @@ void CryptographerRSA::Decrypt()
 
 void CryptographerRSA::Encrypt()
 {
-	string::iterator itor;
+	std::string::iterator itor;
 	for(itor = mData.begin();itor != mData.end();++itor)
 	{
 		EncryptRSA(*itor);

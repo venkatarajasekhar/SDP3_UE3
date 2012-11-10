@@ -3,12 +3,18 @@
 
 #include "Cryptographer.h"
 
+int const Characters = 256;
+int const key = 7;
+
 class CryptographerCaeser :
 	public Cryptographer
 {
 public:
 	void Decrypt();
 	void Encrypt();
+private:
+	void EncryptCaesar(char& ch);
+	void DecryptCaesar(char& ch);
 };
 
 #endif

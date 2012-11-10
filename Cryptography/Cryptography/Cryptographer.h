@@ -4,6 +4,9 @@
 #include <string>
 #include "Object.h"
 
+std::string const extensionRSA = ".RSA";
+std::string const extensionCaesar = ".Caesar";
+
 class Cryptographer :
 	public Object
 {

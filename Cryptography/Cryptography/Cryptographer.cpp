@@ -3,19 +3,17 @@
 #include <string>
 #include "Cryptographer.h"
 
-using namespace std;
-
 Cryptographer::~Cryptographer()
 {}
 
-void Cryptographer::ReadFile(string const& filename)
+void Cryptographer::ReadFile(std::string const& filename)
 {
 	FileToString(filename);
 }
 
-void Cryptographer::WriteFile(string const& filename)
+void Cryptographer::WriteFile(std::string const& filename)
 {
-	fstream file(filename, fstream::out);	//create new file, if it doesnt exsist
+	std::fstream file(filename, std::fstream::out);	//create new file, if it doesnt exsist
 	if(file)
 	{
 		file << mData;
@@ -23,12 +21,12 @@ void Cryptographer::WriteFile(string const& filename)
 	file.close();
 }
 
-void Cryptographer::FileToString(string const& filename)
+void Cryptographer::FileToString(std::string const& filename)
 {
-    ifstream file(filename);
+    std::ifstream file(filename);
     if (file)
     {
-		mData = string(istreambuf_iterator<char>(file),std::istreambuf_iterator<char>());
+		mData = std::string(std::istreambuf_iterator<char>(file),std::istreambuf_iterator<char>());
     }
 	file.close();
 }
