@@ -1,69 +1,63 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : main.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 12.11.2012
+// Description : Testdriver for the whole program
+///////////////////////////////////////////////////////////////////////////
+
 #include <vld.h>
 #include <iostream>
 #include <fstream>
 #include "EpcosAdapter.h"
 #include "NortelNetworksAdapter.h"
 
-using namespace std;
+void Testcase(std::string const& testCase, std::string const& filename)
+{
+	IEpcos* epcosAdapter					= new EpcosAdapter;
+	INortelNetworks* nortelNetworksAdapter	= new NortelNetworksAdapter;
+
+	std::string const filenameRSA(filename+extensionRSA);
+	std::string const filenameCaesar(filename+extensionCaesar);
+	TEncoding encoding;
+
+	std::cout << testCase << std::endl;
+
+	std::cout << "Encrypt with Epcos, RSA: " << filename << " ... ";
+	epcosAdapter->EncryptRSA(filename);
+	std::cout << "Finished" << std::endl;
+	
+	std::cout << "Decrypt with Epcos, RSA: " << filenameRSA << " ... ";
+	epcosAdapter->DecryptRSA(filenameRSA);
+	std::cout << "Finished" << std::endl;
+	
+	encoding = eRSA;
+	std::cout << "Encipher with NortelNetworks, RSA: " << filename << " ... ";
+	nortelNetworksAdapter->Encipher(encoding,filename);
+	std::cout << "Finished" << std::endl;
+	
+	std::cout << "Decipher with NortelNetworks, RSA: " << filenameRSA << " ... ";
+	nortelNetworksAdapter->Decipher(encoding,filenameRSA);
+	std::cout << "Finished" << std::endl;
+
+	encoding = eCaesar;
+	std::cout << "Encipher with NortelNetworks, Caesar: " << filename << " ... ";
+	nortelNetworksAdapter->Encipher(encoding,filename);
+	std::cout << "Finished" << std::endl;
+
+	std::cout << "Decipher with NortelNetworks, Caesar: " << filenameCaesar << " ... ";
+	nortelNetworksAdapter->Decipher(encoding,filenameCaesar);
+	std::cout << "Finished" << std::endl;
+	
+	delete epcosAdapter;
+	delete nortelNetworksAdapter;
+}
 
 int main()
 {
-	//create compare file
-	string const cmp = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^`abcdefghijklmnopqrstuvwxyz_~{|}";
-
-	fstream f1;
-	f1.open("test1.txt",fstream::out | fstream::trunc);	//delete whole content
-	f1 << cmp;
-	f1.close();
-
-	fstream f;
-	f.open("test.txt",fstream::out | fstream::trunc);
-	f << cmp;
-	f.close();
-
-	IEpcos* ie1 = new EpcosAdapter;
-
-	ie1->EncryptRSA("test.txt");
-	ie1->DecryptRSA("test.txt.RSA");
-
-	//string 1
-	string str1;
-	ifstream file("test.txt");
-	if (file)
-	{
-		str1 = string(istreambuf_iterator<char>(file),std::istreambuf_iterator<char>());
-	}
-	file.close();
-
-	//string 2
-	string str2;
-	ifstream file1("test1.txt");
-	if (file1)
-	{
-		str2 = string(istreambuf_iterator<char>(file1),std::istreambuf_iterator<char>());
-	}
-	file1.close();
-
-	if(str1 == str2)
-	{
-		cout << "Compare Test successful!" << endl;
-	}
-
-	delete ie1;
-
-
-	INortelNetworks* NorNet = new NortelNetworksAdapter;
-	string Filename("NortelTest.txt");
-
-	fstream stream;
-	stream.open(Filename,fstream::out | fstream::trunc);	//delete whole content
-	stream << cmp << endl << "Hallo" << endl;
-	stream.close();
-
-	NorNet->Encipher(eCaesar,Filename);
-	NorNet->Decipher(eCaesar,Filename+extensionCaesar);
-
-	delete NorNet;
-
+	Testcase("Testcase0: File doesnt exist","testcase0.txt");
+	Testcase("Testcase1: File is empty","testcase1.txt");
+	Testcase("Testcase2: Ascii symbols","testcase2.txt");
+	Testcase("Testcase3: Normal text","testcase3.txt");
+	
 	return 0;
 }

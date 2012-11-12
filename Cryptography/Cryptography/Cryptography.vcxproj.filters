@@ -67,10 +67,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="test.txt">
+    <None Include="testcase1.txt">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="test1.txt">
+    <None Include="testcase1.txt.Caesar">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase1.txt.RSA">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase2.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase2.txt.Caesar">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase2.txt.RSA">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase3.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase3.txt.Caesar">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase3.txt.RSA">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

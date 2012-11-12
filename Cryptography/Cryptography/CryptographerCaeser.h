@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : CryptographerCaesar.h
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 12.11.2012
+// Description : Header of CryptographerCaesar.cpp
+///////////////////////////////////////////////////////////////////////////
+
 #ifndef CRYPTOGRAPHERCAESAR_H
 #define CRYPTOGRAPHERCAESAR_H
 

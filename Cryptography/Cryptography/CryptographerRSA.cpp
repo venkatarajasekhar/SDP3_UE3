@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : CryptographerRSA.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 12.11.2012
+// Description : Implementation of class CryptographerRSA
+///////////////////////////////////////////////////////////////////////////
+
 #include "CryptographerRSA.h"
 
 void CryptographerRSA::Decrypt()

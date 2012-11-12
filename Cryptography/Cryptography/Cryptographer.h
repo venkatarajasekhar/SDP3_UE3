@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : Cryptographer.h
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 12.11.2012
+// Description : Header of Cryptographer.cpp
+///////////////////////////////////////////////////////////////////////////
+
 #ifndef CRYPTOGRAPHER_H
 #define CRYPTOGRAPHER_H
 
@@ -6,6 +13,7 @@
 
 std::string const extensionRSA = ".RSA";
 std::string const extensionCaesar = ".Caesar";
+std::string const extensionDecrypted = ".Decrypted";
 
 class Cryptographer :
 	public Object

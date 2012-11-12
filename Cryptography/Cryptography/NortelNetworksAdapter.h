@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : NortelNetworksAdapter.h
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 12.11.2012
+// Description : Header of NortelNetworksAdapter.cpp
+///////////////////////////////////////////////////////////////////////////
+
 #ifndef NORTELNETWORKSADAPTER_H
 #define NORTELNETWORKSADAPTER_H
 
