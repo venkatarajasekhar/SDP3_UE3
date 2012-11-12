@@ -277,7 +277,7 @@
             name="Encipher"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -315,7 +315,7 @@
             name="Decipher"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -376,7 +376,7 @@
         <ownedAttributesInternal>
           <property
             Id="0b5dbfb7-a674-4976-9c70-758094e55096"
-            name="mFileStream"
+            name="mData"
             visibility="Protected"
             isLeaf="false"
             isStatic="false"
@@ -388,8 +388,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="d5245ff0-5c26-440b-a93b-2c59ee30694f"
-                LastKnownName="fstream"
+                Id="7d3a626c-263b-4756-89e6-01147a542f91"
+                LastKnownName="string"
                 LastKnownLocation="Classdiagram.uml" />
             </type_NamedElement>
           </property>
@@ -505,6 +505,38 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="296da3e8-46fc-421a-b210-04077ca2de65"
+            name="FileToString"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3e409c81-45a0-40a1-936b-bb4890ec9675"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="25307ff9-2782-426c-97ec-d972b359b527"
+                      LastKnownName="void"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0845d76d-1eb0-4376-9355-c8401c22351e"
+                  name="string const&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -579,7 +611,7 @@
             name="EncryptRSA"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -610,7 +642,7 @@
             name="DecryptRSA"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -671,7 +703,7 @@
       <class
         Id="680a8fae-e705-4622-b94c-20e30a527c97"
         name="CryptographerRSA"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -733,6 +765,109 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="64c42378-6603-4cec-909b-e0a040b00bb2"
+            name="EncryptRSA"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="04ad4d95-8762-4b63-ae46-3204125136dd"
+                  name="char&amp; ch"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="653034fc-5c80-465b-a404-c1adf766417c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="25307ff9-2782-426c-97ec-d972b359b527"
+                      LastKnownName="void"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0508ee7c-156d-4ae2-806e-a4174f098835"
+            name="DecryptRSA"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="476d51b5-2ead-4429-9937-1b99aec52f2f"
+                  name="char&amp; ch"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e6ab76e-c282-4837-a846-a9415eaaeada"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="25307ff9-2782-426c-97ec-d972b359b527"
+                      LastKnownName="void"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="176bffd7-2de6-4902-a45e-41c9f96565a4"
+            name="PowerModulo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b46b96f-6a6e-4a58-9d0a-edeca3f624d2"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07d0fe4f-bd2a-4aa1-8ac0-6f03d2f72e5c"
+                  name="int ed"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc7fb31b-85c7-4279-98d7-b328a0fd2d9f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0f4826ba-c853-4fc9-9603-8a6f41d43bb4"
+                      LastKnownName="int"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -740,7 +875,7 @@
       <class
         Id="93af75cc-4af8-466c-bbbe-b62229ba5ea1"
         name="CryptographerCaeser"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -802,6 +937,70 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="ab0a02d1-f703-4a1f-8fcf-0807dc970764"
+            name="DecryptCaesar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ffdc517-f31c-46b5-926e-20ee99af881e"
+                  name="char&amp; ch"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="916228a2-8b35-4288-8a9e-5ca90cdc6c9d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="25307ff9-2782-426c-97ec-d972b359b527"
+                      LastKnownName="void"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="583f5427-5e10-4a53-8d1f-a09b0b46f729"
+            name="EncryptCaesar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d28a9b33-d014-47dc-9808-5a92da5c4b49"
+                  name="char&amp; ch"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="094399f6-8a7e-4725-8300-a68b9d5aff2d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="25307ff9-2782-426c-97ec-d972b359b527"
+                      LastKnownName="void"
+                      LastKnownLocation="Classdiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -809,6 +1008,16 @@
       <undefinedType
         Id="d5245ff0-5c26-440b-a93b-2c59ee30694f"
         name="fstream" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7d3a626c-263b-4756-89e6-01147a542f91"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0f4826ba-c853-4fc9-9603-8a6f41d43bb4"
+        name="int" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
