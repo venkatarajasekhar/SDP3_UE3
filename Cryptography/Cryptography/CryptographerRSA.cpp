@@ -6,44 +6,53 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include "CryptographerRSA.h"
+ using namespace std::string;
+
+
 
 void CryptographerRSA::Decrypt()
 {
-	std::string::iterator itor;
+	iterator itor;
 	for(itor = mData.begin();itor != mData.end();++itor)
 	{
-		DecryptRSA(*itor);
+		DecryptRSA(itor);
 	}
+	return;
 }
 
 void CryptographerRSA::Encrypt()
 {
-	std::string::iterator itor;
+	iterator itor;
 	for(itor = mData.begin();itor != mData.end();++itor)
 	{
-		EncryptRSA(*itor);
+		EncryptRSA(itor);
 	}
+	return;
 }
 
 void CryptographerRSA::EncryptRSA(char& ch)
 {
 	unsigned char tmp = ch;
-	tmp = PowerModulo(int(tmp),e);
-	ch = tmp;
+	unsigned char Retval;
+	Retval = PowerModulo(int(tmp),e);
+	ch = Retval;
+	return;
 }
 
 void CryptographerRSA::DecryptRSA(char& ch)
 {
 	unsigned char tmp = ch;
-	tmp = PowerModulo(int(tmp),d);
-	ch = tmp;
+	unsigned char Retval;
+	Retval = PowerModulo(int(tmp),d);
+	ch = Retval;
+	return;
 }
 
 //calculate x^(e|d) mod n
-int CryptographerRSA::PowerModulo(int x, int ed)
+int CryptographerRSA::PowerModulo(int x, int Powmodvar)
 { 
 	int result = 1;
-	for (int i = 0; i < ed; ++i)
+	for (int i = 0; i < Powmodvar; ++i)
 	{
 		result = (result * x) % n;
 	}
